@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Vua Hàng Hiệu</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="topbar">
+            <div class="container topbar-inner">
+                <a href="home.html" class="brand">VUA HÀNG HIỆU</a>
+                <div class="search">
+                    <input id="q" type="search" placeholder="Tìm kiếm sản phẩm, thương hiệu…" />
+                    <button id="btn-search" title="Tìm kiếm">🔍</button>
+                </div>
+                <nav class="quick-links">
+                    <a href="login.html" >Tài khoản</a>
+                    <a href="login.html" >Giỏ hàng</a>
+                </nav>
+            </div>
+        </header>
+        <div class="container layout">
+        <aside class="sidebar">
+            <div class="filter-group">
+                <div class="group-title">Thương hiệu</div>
+                <input id="brand-filter" class="filter-search" placeholder="Tìm thương hiệu…" />
+                <div id="brand-list" class="checkbox-list"></div>
+            </div>
+
+            <div class="filter-group">
+                <div class="group-title">Giới tính</div>
+                <label class="cb"><input type="checkbox" name="gender" value="Nam"> Nam</label>
+                <label class="cb"><input type="checkbox" name="gender" value="Nữ"> Nữ</label>
+                <label class="cb"><input type="checkbox" name="gender" value="Unisex"> Unisex</label>
+            </div>
+
+            <div class="filter-group">
+                <div class="group-title">Khoảng giá</div>
+                <div class="price-row">
+                <input id="min-price" type="number" min="0" placeholder="Từ (VND)" />
+                <span>—</span>
+                <input id="max-price" type="number" min="0" placeholder="Đến (VND)" />
+                </div>
+                <button id="btn-apply-price" class="btn small">Áp dụng</button>
+                <button id="btn-clear" class="btn small ghost">Xóa lọc</button>
+            </div>
+        </aside>
+
+    <main class="content">
+        <div class="chips-row" id="brand-chips"></div>
+        <div class="toolbar">
+        <div class="toolbar-left"></div>
+        <div class="toolbar-right">
+            <label for="sort">Sắp xếp:</label>
+            <select id="sort">
+                <option value="popular">Phổ biến</option>
+                <option value="price_asc">Giá tăng dần</option>
+                <option value="price_desc">Giá giảm dần</option>
+                <option value="discount_desc">Giảm giá nhiều</option>
+                <option value="rating_desc">Đánh giá cao</option>
+                <option value="newest">Mới nhất</option>
+                </select>
+            </div>
+        </div>
+            <div id="grid" class="product-grid" aria-live="polite"></div>
+            <div id="pagination" class="pagination"></div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">This is a demo.</div>
+    </footer>
+
+    </body>
+</html>
