@@ -1,6 +1,6 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0; /* khoang cach giua cac phan tu ben ngoai */
+    padding: 0; /* khoang cach giua noi dung va vien */
     box-sizing: border-box;
 }
 body{
@@ -11,45 +11,46 @@ body{
 
 .container{
     max-width:1200px;
-    margin:0 auto;
-    padding:0 16px;
+    margin:0 auto; /* can giua ngang */
+    padding:0 16px; 
 }
 
 /* TopBar */
 .topbar{
     background:#fff;
     border-bottom:1px solid #e9ecef;
-    position:sticky;top:0;
-    z-index:20;
+    position:sticky;top:0; /* dinh o dau trang khi cuon */
+    z-index:20; /* chong len phan khac */
 }
 .brand{
-    font-weight:800;
+    font-weight:800; /* chu dam (bold)*/
     letter-spacing:.3px;
     color:#111;
-    text-decoration:none;
+    text-decoration:none; /* bo gach chan */
 }
 .topbar-inner{
-    display:flex;
-    align-items:center;
-    gap:16px;
+    display:flex; /* dung flex box de sap xep ngang*/
+    align-items:center;  /* can doc */
+    gap:16px; /* khoang cach giua cac phan tu con */
     min-height:64px;
 }
 .search{
     display:flex;
     gap:8px;
-    flex:1;
+    flex:1; /* noi dung chiem het khoang trong con lai */
 }
 .search input{
     flex:1;
     border:1px #e9ecef;
-    border-radius:8px;padding:10px 12px;
+    border-radius:8px; /* tron vanh */
+    padding: 10px 12px; /* tren-duoi tra-phai */
     font-size:14px;
 }
 .search button{
     border:1px #e9ecef;
     background:#fff;
     border-radius:8px;
-    padding:10px 12px;
+    padding:10px 12px; 
     cursor:pointer;
 }
 .quick-links a{
