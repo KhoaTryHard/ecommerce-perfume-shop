@@ -37,10 +37,14 @@ body{
   gap: 16px;
   min-height: 64px;
 }
-.brand{
+.brand {
   font-weight: 800;
   letter-spacing: .3px;
   color: #111;
+  text-decoration: none;
+}
+.brand a{
+  color: #000;
   text-decoration: none;
 }
 .search{
