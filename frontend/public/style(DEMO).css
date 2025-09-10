@@ -60,34 +60,31 @@ body{
 
 
 /* THỬ NGHIỆM */
-/* Khung container chứa swiper */
 .container {
-  width: 100%; /* Để khung bao chiếm hết chiều rộng của màn hình hoặc có thể tùy chỉnh */
-  max-width: 1200px; /* Đặt chiều rộng tối đa */
-  margin: 0 auto; /* Căn giữa */
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
   padding: 20px;
   box-sizing: border-box;
-  background-color: #f8f9fa; /* Màu nền cho container */
+  background-color: #f8f9fa; 
   border: 1px solid #e9ecef;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  position: relative; /* Để đảm bảo các nút điều hướng hoạt động tốt */
+  position: relative;
 }
-
-/* Khung swiper */
 .swiper-container {
-  width: 1200px; /* Đảm bảo swiper container chiếm 100% chiều rộng của container cha */
+  width: 1200px;
   height: 450px;
-  background-color: #fff; /* Màu nền cho swiper */
+  background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 16px; /* Đệm cho swiper */
-  position: relative; /* Để các nút điều hướng nằm chính xác trong swiper */
+  padding: 16px; 
+  position: relative; 
   margin: 50px auto;
   overflow: hidden;
 }
 
-/* Các slide */
+
 .swiper-slide {
     overflow: hidden;
   width: 1200px;
@@ -100,11 +97,10 @@ body{
 .swiper-slide img {
   width: 100%;
   height: 100%;
-  object-fit: contain;  /* Đảm bảo ảnh không bị kéo ra ngoài và phủ đầy khung */
-  object-position: center;  /* Đảm bảo ảnh được căn giữa */
+  object-fit: contain;  
+  object-position: center;  
   overflow: hidden;
 }
-/* Nút điều hướng (Next, Previous) */
 .swiper-button-next, .swiper-button-prev {
   position: absolute;
   top: 50%;
@@ -113,11 +109,10 @@ body{
   font-size: 24px;
   z-index: 10;
 }
-
 .swiper-button-next {
   right: 10px;
 }
-
 .swiper-button-prev {
   left: 10px;
 }
+
