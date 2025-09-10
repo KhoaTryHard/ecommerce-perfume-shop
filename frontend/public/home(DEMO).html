@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>SD Parfum</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <!-- THỬ NGHIỆM -->
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <div class="brand">SD Parfum</div>
+            <div class="search">
+                <input id="input" type="search" placeholder="Search for product, brand..." />
+                <button title="Search">🔍</button>
+            </div>
+            <nav class="quick-links">
+                <a href="#">Account</a>
+                <a href="#">Cart</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="image1.jpg" alt="Image 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="image2.jpg" alt="Image 2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="image3.jpg" alt="Image 3">
+                </div>
+<!-- Thêm nhiều .swiper-slide tương tự -->
+            </div>
+<!-- Thêm nút điều hướng (optional) -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 100,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  loop: true,
+});
+</script>
+
+    </main>
+</body>
+</html>

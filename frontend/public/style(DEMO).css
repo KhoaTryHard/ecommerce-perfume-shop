@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #f7f7f8;
+    color: #222;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* TOP BAR */
+.topbar{
+    background: #fff;
+    border-bottom: 1px #e9ecef;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+.topbar-inner{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 64px;
+}
+.brand{
+    font-weight: 800;
+    letter-spacing: .3px;
+    color: #222;
+}
+.search{
+    display: flex;
+    gap: 8px;
+    flex: 1;
+}
+.search input{
+    flex: 1;
+    border: 1px #e9ecef;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+.search button{
+    border: 1px #e9ecef;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+.quick-links a{
+    color: #222;
+    margin-left: 12px;
+}
+
+
+/* THỬ NGHIỆM */
+/* Khung container chứa swiper */
+.container {
+  width: 100%; /* Để khung bao chiếm hết chiều rộng của màn hình hoặc có thể tùy chỉnh */
+  max-width: 1200px; /* Đặt chiều rộng tối đa */
+  margin: 0 auto; /* Căn giữa */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f8f9fa; /* Màu nền cho container */
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  position: relative; /* Để đảm bảo các nút điều hướng hoạt động tốt */
+}
+
+/* Khung swiper */
+.swiper-container {
+  width: 1200px; /* Đảm bảo swiper container chiếm 100% chiều rộng của container cha */
+  height: 450px;
+  background-color: #fff; /* Màu nền cho swiper */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px; /* Đệm cho swiper */
+  position: relative; /* Để các nút điều hướng nằm chính xác trong swiper */
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+/* Các slide */
+.swiper-slide {
+    overflow: hidden;
+  width: 1200px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 8px;
+  object-fit: contain;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* Đảm bảo ảnh không bị kéo ra ngoài và phủ đầy khung */
+  object-position: center;  /* Đảm bảo ảnh được căn giữa */
+  overflow: hidden;
+}
+/* Nút điều hướng (Next, Previous) */
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
