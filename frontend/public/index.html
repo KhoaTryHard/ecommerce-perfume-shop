@@ -1,82 +1,230 @@
 <!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SD Parfum</title>
 
-<html>
-    <head>
-        <title>SD Parfum</title>
-        <link rel="stylesheet" href="style.css" />
-        <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
-        <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="icon" sizes="192x192" href="android-chrome-192x192.png" type="image/png">
-        <link rel="icon" sizes="512x512" href="android-chrome-512x512.png" type="image/png">
-        <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css" />
 
-    </head>
-    <body>
-        <header class="topbar">
-            <div class="container topbar-inner">
-                <a href="home.html" class="brand">SD Parfum</a>
-                <div class="search">
-                    <input id="q" type="search" placeholder="Tìm kiếm sản phẩm, thương hiệu…" />
-                    <button id="btn-search" title="Tìm kiếm">🔍</button>
-                </div>
-                <nav class="quick-links">
-                    <a href="login.html" >Tài khoản</a>
-                    <a href="login.html" >Giỏ hàng</a>
-                </nav>
-            </div>
-        </header>
-        <div class="container layout">
-        <aside class="sidebar">
-            <div class="filter-group">
-                <div class="group-title">Thương hiệu</div>
-                <input id="brand-filter" class="filter-search" placeholder="Tìm thương hiệu…" />
-                <div id="brand-list" class="checkbox-list"></div>
-            </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="android-chrome-192x192.png" type="image/png">
+    <link rel="icon" sizes="512x512" href="android-chrome-512x512.png" type="image/png">
+    <link rel="manifest" href="manifest.json" />
+  </head>
 
-            <div class="filter-group">
-                <div class="group-title">Giới tính</div>
-                <label class="cb"><input type="checkbox" name="gender" value="Nam"> Nam</label>
-                <label class="cb"><input type="checkbox" name="gender" value="Nữ"> Nữ</label>
-                <label class="cb"><input type="checkbox" name="gender" value="Unisex"> Unisex</label>
-            </div>
+  <body>
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="home.html" class="brand">SD Parfum</a>
 
-            <div class="filter-group">
-                <div class="group-title">Khoảng giá</div>
-                <div class="price-row">
-                <input id="min-price" type="number" min="0" placeholder="Từ (VND)" />
-                <span>—</span>
-                <input id="max-price" type="number" min="0" placeholder="Đến (VND)" />
-                </div>
-                <button id="btn-apply-price" class="btn small">Áp dụng</button>
-                <button id="btn-clear" class="btn small ghost">Xóa lọc</button>
-            </div>
-        </aside>
+        <div class="search" role="search">
+          <input id="q" type="search" placeholder="Tìm kiếm sản phẩm, thương hiệu…" />
+          <button id="btn-search" title="Tìm kiếm" aria-label="Tìm kiếm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
 
-    <main class="content">
+        <nav class="quick-links" aria-label="Liên kết nhanh">
+          <a href="login.html">Tài khoản</a>
+          <a href="cart.html">Giỏ hàng</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <div class="container layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="filter-group">
+          <div class="group-title">Thương hiệu</div>
+          <input id="brand-filter" class="filter-search" placeholder="Tìm thương hiệu…" />
+          <div id="brand-list" class="checkbox-list">
+            <label class="cb"><input type="checkbox" /> Dior</label>
+            <label class="cb"><input type="checkbox" /> Chanel</label>
+            <label class="cb"><input type="checkbox" /> Gucci</label>
+            <label class="cb"><input type="checkbox" /> Versace</label>
+            
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="group-title">Giới tính</div>
+          <label class="cb"><input type="checkbox" name="gender" value="Nam" /> Nam</label>
+          <label class="cb"><input type="checkbox" name="gender" value="Nữ" /> Nữ</label>
+          <label class="cb"><input type="checkbox" name="gender" value="Unisex" /> Unisex</label>
+        </div>
+
+        <div class="filter-group">
+          <div class="group-title">Khoảng giá</div>
+          <div class="price-row">
+            <input id="min-price" type="number" min="0" placeholder="Từ (VND)" />
+            <span>—</span>
+            <input id="max-price" type="number" min="0" placeholder="Đến (VND)" />
+          </div>
+          <button id="btn-apply-price" class="btn small">Áp dụng</button>
+          <button id="btn-clear" class="btn small ghost">Xóa lọc</button>
+        </div>
+      </aside>
+
+      <!-- CONTENT -->
+      <main class="content">
         <div class="chips-row" id="brand-chips"></div>
+
         <div class="toolbar">
-        <div class="toolbar-left"></div>
-        <div class="toolbar-right">
+          <div class="toolbar-left"></div>
+          <div class="toolbar-right">
             <label for="sort">Sắp xếp:</label>
             <select id="sort">
-                <option value="popular">Phổ biến</option>
-                <option value="price_asc">Giá tăng dần</option>
-                <option value="price_desc">Giá giảm dần</option>
-                <option value="discount_desc">Giảm giá nhiều</option>
-                <option value="rating_desc">Đánh giá cao</option>
-                <option value="newest">Mới nhất</option>
-                </select>
-            </div>
+              <option value="popular">Phổ biến</option>
+              <option value="price_asc">Giá tăng dần</option>
+              <option value="price_desc">Giá giảm dần</option>
+              <option value="discount_desc">Giảm giá nhiều</option>
+              <option value="rating_desc">Đánh giá cao</option>
+              <option value="newest">Mới nhất</option>
+            </select>
+          </div>
         </div>
-            <div id="grid" class="product-grid" aria-live="polite"></div>
-            <div id="pagination" class="pagination"></div>
-        </main>
+
+        <div id="grid" class="product-grid" aria-live="polite">
+
+          <article class="card">
+            <img src="https://picsum.photos/seed/p1/400/400" alt="Nước hoa A" />
+            <h4>Nước hoa A</h4>
+            <div class="price-row-card">
+              <span class="price">950.000 đ</span>
+              <span class="badge sale">-47%</span>
+            </div>
+            <button class="btn add">Thêm vào giỏ</button>
+          </article>
+
+          <article class="card">
+            <img src="https://picsum.photos/seed/p2/400/400" alt="Nước hoa B" />
+            <h4>Nước hoa B</h4>
+            <div class="price-row-card">
+              <span class="price">539.000 đ</span>
+              <span class="badge sale">-52%</span>
+            </div>
+            <button class="btn add">Thêm vào giỏ</button>
+          </article>
+
+          <article class="card"><img src="https://picsum.photos/seed/p3/400/400" alt=""><h4>Nước hoa C</h4><div class="price-row-card"><span class="price">1.290.000 đ</span></div><button class="btn add">Thêm vào giỏ</button></article>
+          <article class="card"><img src="https://picsum.photos/seed/p4/400/400" alt=""><h4>Nước hoa D</h4><div class="price-row-card"><span class="price">890.000 đ</span><span class="badge sale">-20%</span></div><button class="btn add">Thêm vào giỏ</button></article>
+          <article class="card"><img src="https://picsum.photos/seed/p5/400/400" alt=""><h4>Nước hoa E</h4><div class="price-row-card"><span class="price">1.050.000 đ</span></div><button class="btn add">Thêm vào giỏ</button></article>
+          <article class="card"><img src="https://picsum.photos/seed/p6/400/400" alt=""><h4>Nước hoa F</h4><div class="price-row-card"><span class="price">699.000 đ</span></div><button class="btn add">Thêm vào giỏ</button></article>
+          <article class="card"><img src="https://picsum.photos/seed/p7/400/400" alt=""><h4>Nước hoa G</h4><div class="price-row-card"><span class="price">1.990.000 đ</span><span class="badge sale">-31%</span></div><button class="btn add">Thêm vào giỏ</button></article>
+          <article class="card"><img src="https://picsum.photos/seed/p8/400/400" alt=""><h4>Nước hoa H</h4><div class="price-row-card"><span class="price">459.000 đ</span></div><button class="btn add">Thêm vào giỏ</button></article>
+        </div>
+
+        <div id="pagination" class="pagination"></div>
+      </main>
     </div>
 
-    <footer class="footer">
-        <div class="container">This is a demo.</div>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <!-- Social row -->
+      <div class="footer-social">
+        <a href="#" aria-label="Địa chỉ"><i class="fa-solid fa-location-dot"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Hotline"><i class="fa-solid fa-phone"></i></a>
+      </div>
+
+      <!-- Content columns -->
+      <div class="footer-columns container">
+        <div class="footer-col">
+          <h3>GIỚI THIỆU</h3>
+          <ul>
+            <li><a href="#">Giới thiệu về SD Parfum</a></li>
+            <li><a href="#">Quan điểm kinh doanh</a></li>
+            <li><a href="#">Bản quyền &amp; Sở hữu</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>CHÍNH SÁCH CÔNG TY</h3>
+          <ul>
+            <li><a href="#">Điều khoản sử dụng</a></li>
+            <li><a href="#">Chính sách bảo mật thông tin</a></li>
+            <li><a href="#">Chính sách vận chuyển, giao nhận, kiểm hàng</a></li>
+            <li><a href="#">Chính sách bảo hành</a></li>
+            <li><a href="#">Chính sách đổi trả</a></li>
+            <li><a href="#">Nhượng Quyền Thương Hiệu</a></li>
+            <li><a href="#">Trả góp 0% qua thẻ tín dụng</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>TRỢ GIÚP</h3>
+          <ul>
+            <li><a href="#">Hướng dẫn sử dụng nước hoa</a></li>
+            <li><a href="#">Hướng dẫn mua hàng</a></li>
+            <li><a href="#">Phương thức thanh toán</a></li>
+            <li><a href="#">Gói quà miễn phí</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>THÔNG TIN KHÁC</h3>
+          <ul>
+            <li><a href="#">Hoạt động TGNH</a></li>
+            <li><a href="#">Member Card</a></li>
+            <li><a href="#">Gift Voucher</a></li>
+            <li><a href="#">Tuyển dụng</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>LIÊN HỆ</h3>
+          <ul>
+            <li><a href="#">Hệ thống showroom</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="footer-sep" />
+
+      <!-- Bottom legal -->
+      <div class="footer-bottom container">
+        <p><strong>Copyright © 2008 Công ty CPTM SD SHOP &amp; Mỹ Phẩm.</strong></p>
+        <p>Giấy chứng nhận ĐKKD số: 0317116620 do Sở KH&amp;ĐT TPHCM cấp lần đầu ngày 10/01/2022.</p>
+        <p>Địa chỉ: 10-10B Cách Mạng Tháng 8, Phường Bến Thành, TP. Hồ Chí Minh</p>
+        <p>Điện thoại: 0337 990 731 - Đặt hàng: 0337 990 731 - CSKH: 0337 990 731</p>
+      </div>
+
+      <!-- Floating actions -->
+      <div class="floating-actions">
+        <a class="fb" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a class="phone" href="#" aria-label="Gọi điện"><i class="fa-solid fa-phone"></i></a>
+        <a class="zalo" href="#" aria-label="Zalo">Zalo</a>
+        <a class="mess" href="#" aria-label="Messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
+      </div>
+
+      <!-- Back to top -->
+      <button class="btn-top" aria-label="Lên đầu trang" title="Lên đầu trang">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
     </footer>
 
-    </body>
+    <script>
+      const btnTop = document.querySelector(".btn-top");
+      const toggleTop = () => {
+        if (window.scrollY > 300) btnTop.classList.add("show");
+        else btnTop.classList.remove("show");
+      };
+      window.addEventListener("scroll", toggleTop);
+      btnTop.addEventListener("click", () =>
+        window.scrollTo({ top: 0, behavior: "smooth" })
+      );
+      toggleTop();
+    </script>
+  </body>
 </html>
