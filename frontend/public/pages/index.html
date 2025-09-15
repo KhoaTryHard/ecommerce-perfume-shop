@@ -5,18 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SD Parfum</title>
 
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/scr/css/style.css" />
 
     <link
       rel="stylesheet"
       href="/images/fontawesome-free-7.0.1-web/css/all.min.css"
     />
-    <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="icon" sizes="192x192" href="android-chrome-192x192.png" type="image/png">
-    <link rel="icon" sizes="512x512" href="android-chrome-512x512.png" type="image/png">
-    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="/android-chrome-192x192.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="512x512"
+      href="/android-chrome-512x512.png"
+      type="image/png"
+    />
+    <link rel="manifest" href="/manifest.json" />
   </head>
 
   <body>
@@ -26,7 +36,11 @@
         <a href="home.html" class="brand">SD Parfum</a>
 
         <div class="search" role="search">
-          <input id="q" type="search" placeholder="Tìm kiếm sản phẩm, thương hiệu…" />
+          <input
+            id="q"
+            type="search"
+            placeholder="Tìm kiếm sản phẩm, thương hiệu…"
+          />
           <button id="btn-search" title="Tìm kiếm" aria-label="Tìm kiếm">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
@@ -45,32 +59,460 @@
       <aside class="sidebar">
         <div class="filter-group">
           <div class="group-title">Thương hiệu</div>
-          <input id="brand-filter" class="filter-search" placeholder="Tìm thương hiệu…" />
+          <input
+            id="brand-filter"
+            class="filter-search"
+            placeholder="Tìm thương hiệu…"
+          />
           <div id="brand-list" class="checkbox-list">
             <label class="cb"><input type="checkbox" /> Dior</label>
             <label class="cb"><input type="checkbox" /> Chanel</label>
             <label class="cb"><input type="checkbox" /> Gucci</label>
-            <label class="cb"><input type="checkbox" /> Versace</label>
-            
+            <label class="cb"><input type="checkbox" /> Lancome</label>
+            <label class="cb"><input type="checkbox" /> Chloe</label
+            ><label class="cb"><input type="checkbox" /> D&G</label>
+            <label class="cb"><input type="checkbox" /> Marc Jacobs</label>
+            <label class="cb"><input type="checkbox" /> Estee Lauder</label>
+            <label class="cb"><input type="checkbox" /> Guerlain</label>
+            <label class="cb"><input type="checkbox" /> Estee Lauder</label>
+            <label class="cb"><input type="checkbox" /> Giorgio Armani</label>
+            <label class="cb"><input type="checkbox" /> Calvin Klein</label>
+            <label class="cb"><input type="checkbox" /> Burberry</label>
+            <label class="cb"><input type="checkbox" /> Tom Ford</label>
           </div>
         </div>
 
         <div class="filter-group">
           <div class="group-title">Giới tính</div>
-          <label class="cb"><input type="checkbox" name="gender" value="Nam" /> Nam</label>
-          <label class="cb"><input type="checkbox" name="gender" value="Nữ" /> Nữ</label>
-          <label class="cb"><input type="checkbox" name="gender" value="Unisex" /> Unisex</label>
+          <div id="brand-list" class="checkbox-list">
+            <label class="cb"
+              ><input type="checkbox" name="gender" value="Nam" /> Nam</label
+            >
+            <label class="cb"
+              ><input type="checkbox" name="gender" value="Nữ" /> Nữ</label
+            >
+            <label class="cb"
+              ><input type="checkbox" name="gender" value="Unisex" />
+              Unisex</label
+            >
+          </div>
         </div>
 
         <div class="filter-group">
           <div class="group-title">Khoảng giá</div>
           <div class="price-row">
-            <input id="min-price" type="number" min="0" placeholder="Từ (VND)" />
+            <input
+              id="min-price"
+              type="number"
+              min="0"
+              placeholder="Từ (VND)"
+            />
             <span>—</span>
-            <input id="max-price" type="number" min="0" placeholder="Đến (VND)" />
+            <input
+              id="max-price"
+              type="number"
+              min="0"
+              placeholder="Đến (VND)"
+            />
           </div>
           <button id="btn-apply-price" class="btn small">Áp dụng</button>
           <button id="btn-clear" class="btn small ghost">Xóa lọc</button>
+        </div>
+        <div class="filter-group">
+          <div class="group-title">Dung tích</div>
+          <input
+            id="brand-filter"
+            class="filter-search"
+            placeholder="Tìm kiếm"
+          />
+          <div id="brand-list" class="checkbox-list">
+            <label class="cb"
+              ><input type="checkbox" name="capacity" value="100ml" />
+              100ml</label
+            >
+            <label class="cb"
+              ><input type="checkbox" name="capacity" value="50ml" />
+              50ml</label
+            >
+            <label class="cb"
+              ><input type="checkbox" name="capacity" value="30ml" />
+              30ml</label
+            >
+            <label class="cb"
+              ><input type="checkbox" name="capacity" value="10ml" />
+              10ml</label
+            >
+            <label class="cb"
+              ><input type="checkbox" name="capacity" value="5ml" /> 5ml</label
+            >
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="group-title">Nhóm hương</div>
+          <input
+            id="brand-filter"
+            class="filter-search"
+            placeholder="Tìm kiếm"
+          />
+          <div id="brand-list" class="checkbox-list">
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-family"
+                value="Nhóm hương thực phẩm Gourmand"
+              />
+              Nhóm hương thực phẩm – Gourmand</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-family"
+                value="Nhóm hương gia vị – Spicy"
+              />
+              Nhóm hương gia vị – Spicy
+            </label>
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-family"
+                value="Nhóm hương Síp – Chypre"
+              />
+              Nhóm hương Síp – Chypre</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-family"
+                value="Nhóm mùi hương thảo mộc – Aromatic"
+              />
+              Nhóm mùi hương thảo mộc – Aromatic</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-family"
+                value="Nhóm hương phương Đông – Oriental"
+              />
+              Nhóm hương phương Đông – Oriental</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-family"
+                value="Nhóm hương da thuộc – Leather"
+              />
+              Nhóm hương da thuộc – Leather</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-family"
+                value="Nhóm hương gỗ & rêu – Woody"
+              />
+              Nhóm hương gỗ & rêu – Woody</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-family"
+                value="Nhóm hương trái cây – Fruity"
+              />
+              Nhóm hương trái cây – Fruity</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-family"
+                value="Nhóm hương hoa cỏ – Floral"
+              />
+              Nhóm hương hoa cỏ – Floral</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-family"
+                value="Nhóm hương cam chanh – Citrus"
+              />
+              Nhóm hương cam chanh – Citrus</label
+            >
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="group-title">Phong cách</div>
+          <input id="brand-list" class="filter-search" placeholder="Tìm kiếm" />
+          <div id="brand-list" class="checkbox-list">
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Nam tính, lịch lãm, sang trọng"
+              />
+              Nam tính, lịch lãm, sang trọng</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Nam tính, tươi mát"
+              />
+              Nam tính, tươi mát
+            </label>
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Sang trọng, quyến rũ, ngọt ngào"
+              />
+              Sang trọng, quyến rũ, ngọt ngào</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Cuốn hút, mạnh mẽ, nam tính"
+              />
+              Cuốn hút, mạnh mẽ, nam tính</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Ngọt ngào, gợi cảm, nữ tính"
+              />
+              Ngọt ngào, gợi cảm, nữ tính</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Tao nhã, thanh lịch, tươi mát"
+              />
+              Tao nhã, thanh lịch, tươi mát</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Nữ tính, dịu dàng, trang nhã"
+              />
+              Nữ tính, dịu dàng, trang nhã</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Cuốn hút, mạnh mẽ, sang trọng"
+              />
+              Cuốn hút, mạnh mẽ, sang trọng</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Nhẹ nhàng, tinh tế, gần gũi"
+              />
+              Nhẹ nhàng, tinh tế, gần gũi</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Cá tính, hiện đại, trẻ trung"
+              />
+              Cá tính, hiện đại, trẻ trung</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Quyến rũ, gợi cảm, tinh tế"
+              />
+              Quyến rũ, gợi cảm, tinh tế</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Quyến rũ, nữ tính, ngọt ngào"
+              />
+              Quyến rũ, nữ tính, ngọt ngào</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Nam tính, lịch lãm, phong cách"
+              />
+              Nam tính, lịch lãm, phong cách</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Bí ẩn, gợi cảm, quyến rũ"
+              />
+              Bí ẩn, gợi cảm, quyến rũ</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Lịch lãm, phong trần, trầm ấm"
+              />
+              Lịch lãm, phong trần, trầm ấm</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Ngọt ngào, tươi trẻ"
+              />
+              Ngọt ngào, tươi trẻ</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Nữ tính, hiện đại, tự tin, cuốn hút"
+              />
+              Nữ tính, hiện đại, tự tin, cuốn hút</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Quyến rũ, ngọt ngào, dịu dàng"
+              />
+              Quyến rũ, ngọt ngào, dịu dàng</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Nữ tính, quyến rũ, sang trọng"
+              />
+              Nữ tính, quyến rũ, sang trọng</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="fragrance-style"
+                value="Tươi mát, trẻ trung, năng động"
+              />
+              Tươi mát, trẻ trung, năng động</label
+            >
+          </div>
+        </div>
+        <div class="filter-group">
+          <div class="group-title">Xuất xứ thương hiệu</div>
+          <input
+            id="brand-origin"
+            class="filter-search"
+            placeholder="Tìm kiếm"
+          />
+          <div id="brand-list" class="checkbox-list">
+            <label class="cb"
+              ><input type="checkbox" name="brand-origin" value="Viet-Nam" />
+              Việt Nam</label
+            >
+            <label class="cb"
+              ><input type="checkbox" name="brand-origin" value="France" />
+              Pháp</label
+            >
+            <label class="cb"
+              ><input type="checkbox" name="brand-origin" value="Italy" />
+              Ý</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="brand-origin"
+                value="United-Kingdom"
+              />
+              Anh</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="brand-origin"
+                value="Tươi mát, trẻ trung, năng động"
+              />
+              Mỹ</label
+            ><label class="cb"
+              ><input
+                type="checkbox"
+                name="brand-origin"
+                value="Tươi mát, trẻ trung, năng động"
+              />
+              D&G</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="brand-origin"
+                value="Tươi mát, trẻ trung, năng động"
+              />
+              Marc Jacobs</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="brand-origin"
+                value="Tươi mát, trẻ trung, năng động"
+              />
+              Estee Lauder</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="brand-origin"
+                value="Tươi mát, trẻ trung, năng động"
+              />
+              Guerlain</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="brand-origin"
+                value="Tươi mát, trẻ trung, năng động"
+              />
+              Estee Lauder</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="brand-origin"
+                value="Tươi mát, trẻ trung, năng động"
+              />
+              Giorgio Armani</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="brand-origin"
+                value="Tươi mát, trẻ trung, năng động"
+              />
+              Calvin Klein</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="brand-origin"
+                value="Tươi mát, trẻ trung, năng động"
+              />
+              Burberry</label
+            >
+            <label class="cb"
+              ><input
+                type="checkbox"
+                name="brand-origin"
+                value="Tươi mát, trẻ trung, năng động"
+              />
+              Tom Ford</label
+            >
+          </div>
         </div>
       </aside>
 
@@ -79,7 +521,57 @@
         <div class="chips-row" id="brand-chips"></div>
 
         <div class="toolbar">
-          <div class="toolbar-left"></div>
+
+          <div class="toolbar-left">
+
+            <div class="brand-carousel">
+    <button class="prev">&#10094;</button>
+
+    <div class="brand-list">
+      <div class="brand-item">
+        <img src="\images\nuoc-hoa-versace-eros-cho-nam-say-dam-phai-nu-minisize-5ml-5db936dcd37ed-30102019140812.jpg" alt="Dior">
+        <span>Dior</span>
+      </div>
+      <div class="brand-item">
+        <img src="https://picsum.photos/seed/p1/400/400" alt="Chanel">
+        <span>Chanel</span>
+      </div>
+      <div class="brand-item">
+        <img src="https://picsum.photos/seed/p1/400/400" alt="Giorgio Armani">
+        <span>Giorgio Armani</span>
+      </div>
+      <div class="brand-item">
+        <img src="https://via.placeholder.com/80x60?text=Versace" alt="Versace">
+        <span>Versace</span>
+      </div>
+      <div class="brand-item">
+        <img src="https://via.placeholder.com/80x60?text=Creed" alt="Creed">
+        <span>Creed</span>
+      </div>
+      <div class="brand-item">
+        <img src="https://via.placeholder.com/80x60?text=Gucci" alt="Gucci">
+        <span>Gucci</span>
+      </div>
+    </div>
+
+    <button class="next">&#10095;</button>
+  </div>
+
+  <script>
+    const brandList = document.querySelector(".brand-list");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+
+    nextBtn.addEventListener("click", () => {
+      brandList.scrollBy({ left: 200, behavior: "smooth" });
+    });
+
+    prevBtn.addEventListener("click", () => {
+      brandList.scrollBy({ left: -200, behavior: "smooth" });
+    });
+  </script>
+          </div>
+          
           <div class="toolbar-right">
             <label for="sort">Sắp xếp:</label>
             <select id="sort">
@@ -94,7 +586,6 @@
         </div>
 
         <div id="grid" class="product-grid" aria-live="polite">
-
           <article class="card">
             <img src="https://picsum.photos/seed/p1/400/400" alt="Nước hoa A" />
             <h4>Nước hoa A</h4>
@@ -115,25 +606,151 @@
             <button class="btn add">Thêm vào giỏ</button>
           </article>
 
-          <article class="card"><img src="https://picsum.photos/seed/p3/400/400" alt=""><h4>Nước hoa C</h4><div class="price-row-card"><span class="price">1.290.000 đ</span></div><button class="btn add">Thêm vào giỏ</button></article>
-          <article class="card"><img src="https://picsum.photos/seed/p4/400/400" alt=""><h4>Nước hoa D</h4><div class="price-row-card"><span class="price">890.000 đ</span><span class="badge sale">-20%</span></div><button class="btn add">Thêm vào giỏ</button></article>
-          <article class="card"><img src="https://picsum.photos/seed/p5/400/400" alt=""><h4>Nước hoa E</h4><div class="price-row-card"><span class="price">1.050.000 đ</span></div><button class="btn add">Thêm vào giỏ</button></article>
-          <article class="card"><img src="https://picsum.photos/seed/p6/400/400" alt=""><h4>Nước hoa F</h4><div class="price-row-card"><span class="price">699.000 đ</span></div><button class="btn add">Thêm vào giỏ</button></article>
-          <article class="card"><img src="https://picsum.photos/seed/p7/400/400" alt=""><h4>Nước hoa G</h4><div class="price-row-card"><span class="price">1.990.000 đ</span><span class="badge sale">-31%</span></div><button class="btn add">Thêm vào giỏ</button></article>
-          <article class="card"><img src="https://picsum.photos/seed/p8/400/400" alt=""><h4>Nước hoa H</h4><div class="price-row-card"><span class="price">459.000 đ</span></div><button class="btn add">Thêm vào giỏ</button></article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/p3/400/400" alt="" />
+            <h4>Nước hoa C</h4>
+            <div class="price-row-card">
+              <span class="price">1.290.000 đ</span>
+            </div>
+            <button class="btn add">Thêm vào giỏ</button>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/p4/400/400" alt="" />
+            <h4>Nước hoa D</h4>
+            <div class="price-row-card">
+              <span class="price">890.000 đ</span
+              ><span class="badge sale">-20%</span>
+            </div>
+            <button class="btn add">Thêm vào giỏ</button>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/p5/400/400" alt="" />
+            <h4>Nước hoa E</h4>
+            <div class="price-row-card">
+              <span class="price">1.050.000 đ</span>
+            </div>
+            <button class="btn add">Thêm vào giỏ</button>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/p6/400/400" alt="" />
+            <h4>Nước hoa F</h4>
+            <div class="price-row-card">
+              <span class="price">699.000 đ</span>
+            </div>
+            <button class="btn add">Thêm vào giỏ</button>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/p7/400/400" alt="" />
+            <h4>Nước hoa G</h4>
+            <div class="price-row-card">
+              <span class="price">1.990.000 đ</span
+              ><span class="badge sale">-31%</span>
+            </div>
+            <button class="btn add">Thêm vào giỏ</button>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/p8/400/400" alt="" />
+            <h4>Nước hoa H</h4>
+            <div class="price-row-card">
+              <span class="price">459.000 đ</span>
+            </div>
+            <button class="btn add">Thêm vào giỏ</button>
+          </article>
         </div>
 
         <div id="pagination" class="pagination"></div>
       </main>
     </div>
 
+    <!-- BLOG -->
+    <div class="blog">
+      <h4>Nước Hoa – Nơi Chứa Đựng Những Mùi Hương Cám Dỗ Bậc Nhất Thế giới</h4>
+      <p>
+        Đến tận ngày nay vẫn chưa ai biết rõ chính xác nguồn gốc của những chai
+        nước hoa từ đâu mà có, huyền bí như cách các mùi hương toả ngát trên da
+        thịt. Nhưng một điều không thể phủ nhận, nước hoa luôn là thứ quan trọng
+        trong bất cứ tôn giáo, quốc gia, chế độ hay cá nhân nào. Những mùi hương
+        đã ướp thơm các nền văn hoá, phảng phất, bay bổng và trở thành một trong
+        những thứ cám dỗ bậc nhất thế giới.
+      </p>
+        Nước hoa đã trở thành một phần không thể thiếu trong cuộc sống hàng
+        ngày. Không chỉ là công cụ để tạo ra mùi hương dễ chịu, nước hoa còn
+        giúp khẳng định phong cách và cá tính của mỗi người. Từ những hương thơm
+        ngọt ngào của hoa cỏ, nồng nàn của gỗ, đến sự tươi mát của cam chanh,
+        nước hoa đem đến hành trình cảm xúc tuyệt vời cho người dùng.
+      </p>
+      <p>
+        Nước hoa có lịch sử lâu đời, bắt đầu từ các nền văn minh cổ đại như Ai
+        Cập, Hy Lạp và La Mã. Ban đầu, nước hoa được tạo ra từ nguyên liệu thiên
+        nhiên như hoa, thảo mộc và tinh dầu. Theo thời gian, nước hoa phát triển
+        thành một ngành công nghiệp lớn, với nhiều thương hiệu nổi tiếng xuất
+        hiện, đáp ứng nhu cầu và sở thích đa dạng của người dùng.
+      </p>
+      <p>
+        Trong cuộc sống, nước hoa không đơn giản là mang lại mùi hương thơm
+        ngát, mà còn có tác dụng tích cực đến tâm trạng và cảm xúc của con
+        người. Mỗi loại nước hoa đều mang đến trải nghiệm riêng biệt, từ sự nhẹ
+        nhàng, dễ chịu đến quyến rũ, bí ẩn. Việc sử dụng nước hoa cũng là cách
+        để thể hiện phong cách cá nhân và tạo ấn tượng với người khác.
+      </p>
+      <h3>Kiến thức về mùi hương của nước hoa</h3>
+      <h4>Nốt hương nước hoa</h4>
+      <p>
+        Nước hoa thường được tạo thành từ ba tầng hương chính: nốt hương đầu,
+        nốt hương giữa và nốt hương cuối. Ba tầng hương này kết hợp với nhau để
+        tạo nên mùi hương hoàn chỉnh, kéo dài theo thời gian.
+      </p>
+      <ul>
+      <li>
+        <strong>Nốt hương đầu (Top Notes): </strong>Là mùi hương đầu tiên bạn cảm nhận ngay khi
+        xịt nước hoa lên da. Đây thường là những mùi hương tươi mát, nhẹ nhàng
+        như cam, chanh, bạc hà hoặc hoa oải hương. Nốt hương này mang đến cảm
+        giác sảng khoái, thu hút ban đầu nhưng chỉ tồn tại từ 15 phút đến 1 giờ
+        trước khi phai dần để chuyển sang nốt hương tiếp theo. Nốt hương giữa
+      </li>
+
+      <li>
+        <strong>(Heart Notes):</strong> Được coi là “linh hồn” của nước hoa, là tầng hương chính
+        định hình bản sắc của mùi hương. Các nốt hương này thường là hoa hồng,
+        hoa nhài, hoa mẫu đơn hoặc các loại thảo mộc như hương thảo, tiêu đen.
+        Cảm giác mang lại là sự ấm áp, quyến rũ hoặc thanh lịch, lưu hương từ 1
+        đến 6 giờ tùy thuộc vào loại nước hoa.
+      </li>
+        <li>
+      
+        <strong>Nốt hương cuối (Base Notes):</strong> Là
+        tầng hương cuối cùng, lưu lại lâu nhất trên da, thường xuất hiện sau khi
+        nốt giữa bắt đầu mờ dần. Đây thường là mùi hương đậm, sâu như gỗ đàn
+        hương, hổ phách, vani hoặc xạ hương. Nốt hương cuối mang đến cảm giác sang trọng, ấm áp, kéo dài từ 6 đến 24
+        giờ, tùy thuộc vào nồng độ nước hoa.
+      </li>
+      </ul>
+      <strong>Ví dụ: </strong>
+      <ul>
+        
+        <li>
+        Chanel No. 5: Kết hợp giữa
+        hương đầu cam bergamot, hương giữa hoa nhài và hương cuối gỗ đàn hương.
+        Sự pha trộn này mang đến cảm giác cổ điển, thanh lịch và quyến rũ, phù
+        hợp với những ai yêu thích sự sang trọng. </li>
+        <li>Dior Sauvage: Mở đầu bằng
+        hương cam bergamot, tiếp nối với nốt hương giữa là tiêu đen và oải
+        hương, cuối cùng là hương ambroxan mạnh mẽ. Combo này tạo cảm giác nam
+        tính, hiện đại và tự tin, lý tưởng cho những buổi tối đặc biệt. </li></ul>
+    </div>
     <!-- FOOTER -->
     <footer class="site-footer">
       <!-- Social row -->
       <div class="footer-social">
-        <a href="#" aria-label="Địa chỉ"><i class="fa-solid fa-location-dot"></i></a>
-        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Địa chỉ"
+          ><i class="fa-solid fa-location-dot"></i
+        ></a>
+        <a href="#" aria-label="Facebook"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a href="#" aria-label="YouTube"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
         <a href="#" aria-label="Hotline"><i class="fa-solid fa-phone"></i></a>
       </div>
 
@@ -194,18 +811,33 @@
 
       <!-- Bottom legal -->
       <div class="footer-bottom container">
-        <p><strong>Copyright © 2008 Công ty CPTM SD SHOP &amp; Mỹ Phẩm.</strong></p>
-        <p>Giấy chứng nhận ĐKKD số: 0317116620 do Sở KH&amp;ĐT TPHCM cấp lần đầu ngày 10/01/2022.</p>
-        <p>Địa chỉ: 10-10B Cách Mạng Tháng 8, Phường Bến Thành, TP. Hồ Chí Minh</p>
-        <p>Điện thoại: 0337 990 731 - Đặt hàng: 0337 990 731 - CSKH: 0337 990 731</p>
+        <p>
+          <strong>Copyright © 2008 Công ty CPTM SD SHOP &amp; Mỹ Phẩm.</strong>
+        </p>
+        <p>
+          Giấy chứng nhận ĐKKD số: 0317116620 do Sở KH&amp;ĐT TPHCM cấp lần đầu
+          ngày 10/01/2022.
+        </p>
+        <p>
+          Địa chỉ: 10-10B Cách Mạng Tháng 8, Phường Bến Thành, TP. Hồ Chí Minh
+        </p>
+        <p>
+          Điện thoại: 0337 990 731 - Đặt hàng: 0337 990 731 - CSKH: 0337 990 731
+        </p>
       </div>
 
       <!-- Floating actions -->
       <div class="floating-actions">
-        <a class="fb" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a class="phone" href="#" aria-label="Gọi điện"><i class="fa-solid fa-phone"></i></a>
+        <a class="fb" href="#" aria-label="Facebook"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a class="phone" href="#" aria-label="Gọi điện"
+          ><i class="fa-solid fa-phone"></i
+        ></a>
         <a class="zalo" href="#" aria-label="Zalo">Zalo</a>
-        <a class="mess" href="#" aria-label="Messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
+        <a class="mess" href="#" aria-label="Messenger"
+          ><i class="fa-brands fa-facebook-messenger"></i
+        ></a>
       </div>
 
       <!-- Back to top -->
