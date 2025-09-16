@@ -116,3 +116,85 @@ body{
   left: 10px;
 }
 
+/* Swiper sản phẩm */
+.product-swiper {
+  width: 1200px;
+  margin: 40px auto;
+  padding: 20px 0;
+}
+
+.product-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.product-swiper .card {
+  width: 250px;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-swiper .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.product-swiper .card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-swiper .price-row-card {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.product-swiper .price {
+  font-weight: bold;
+  color: #d0021b;
+}
+
+.product-swiper .badge.sale {
+  background: #ff4d4d;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.product-swiper .btn.add {
+  margin-top: 6px;
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.product-swiper .btn.add:hover {
+  background: #084298;
+}
+
+/* Điều hướng và pagination */
+.product-swiper .swiper-button-next,
+.product-swiper .swiper-button-prev {
+  color: #000;
+  font-size: 20px;
+}
+
+.product-swiper .swiper-pagination-bullet {
+  background: #aaa;
+  opacity: 0.7;
+}
+
+.product-swiper .swiper-pagination-bullet-active {
+  background: var(--brand);
+  opacity: 1;
+}

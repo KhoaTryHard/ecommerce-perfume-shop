@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SD Parfum</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="/scr/css/style.css" />
+
     <link
       rel="stylesheet"
       href="/images/fontawesome-free-7.0.1-web/css/all.min.css"
     />
-    <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="icon" sizes="192x192" href="android-chrome-192x192.png" type="image/png">
-    <link rel="icon" sizes="512x512" href="android-chrome-512x512.png" type="image/png">
-    <link rel="manifest" href="manifest.json" />
-</head>
+    <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="/android-chrome-192x192.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      sizes="512x512"
+      href="/android-chrome-512x512.png"
+      type="image/png"
+    />
+    <link rel="manifest" href="/manifest.json" />
+  </head>
 <body>
     <header class="topbar">
         <div class="container topbar-inner">
-            <div class="brand"> <a href="home.html">SD Parfum</a>
-            </div>
+            <a href="home.html" class="brand">SD Parfum</a>
             <div class="search">
                 <input id="q" type="search" placeholder="Tìm kiếm sản phẩm, thương hiệu…" />
                 <button id="btn-search" title="Tìm kiếm">🔍</button>
@@ -30,9 +44,156 @@
             </div>
     </header>
     <main>
-        <a href="index.html" class="center">
-            <img src="/images/background.jpg" alt="Background" >
-        </a>
+      <!-- Swiper hình ảnh -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="index.html">
+                    <img src="/images/Photoroom_20250412_184802.JPG" alt="Image 1">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="index.html">
+                    <img src="/images/Photoroom_20250412_185500.JPG" alt="Image 2">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="index.html">
+                    <img src="/images/Photoroom_20250412_185840.JPG" alt="Image 3">
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <!-- Swiper sản phẩm -->
+        <h2>SẢN PHẨM MỚI</h2>
+        <div class="swiper-container product-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <article class="card">
+                <img src="https://picsum.photos/seed/p1/400/400" alt="Nước hoa A" />
+                <h4>Nước hoa A</h4>
+                <div class="price-row-card">
+                  <span class="price">950.000 đ</span>
+                  <span class="badge sale">-47%</span>
+                </div>
+                <button class="btn add">Thêm vào giỏ</button>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="card">
+                <img src="https://picsum.photos/seed/p2/400/400" alt="Nước hoa B" />
+                <h4>Nước hoa B</h4>
+                <div class="price-row-card">
+                  <span class="price">539.000 đ</span>
+                  <span class="badge sale">-52%</span>
+                </div>
+                <button class="btn add">Thêm vào giỏ</button>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="card">
+                <img src="https://picsum.photos/seed/p3/400/400" alt="" />
+                <h4>Nước hoa C</h4>
+                <div class="price-row-card">
+                  <span class="price">1.290.000 đ</span>
+                </div>
+                <button class="btn add">Thêm vào giỏ</button>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="card">
+                <img src="https://picsum.photos/seed/p4/400/400" alt="" />
+                <h4>Nước hoa D</h4>
+                <div class="price-row-card">
+                  <span class="price">890.000 đ</span>
+                  <span class="badge sale">-20%</span>
+                </div>
+                <button class="btn add">Thêm vào giỏ</button>
+              </article>
+            </div>
+            
+            <div class="swiper-slide">
+              <article class="card">
+                <img src="https://picsum.photos/seed/p5/400/400" alt="" />
+                <h4>Nước hoa E</h4>
+                <div class="price-row-card">
+                  <span class="price">1.050.000 đ</span>
+                </div>
+                <button class="btn add">Thêm vào giỏ</button>
+              </article>
+            </div>
+          </div>
+          <div class="product-pagination"></div>
+        </div>
+
+        <h2>SẢN PHẨM NỔI BẬT</h2>
+        <div class="swiper-container product-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <article class="card">
+                <img src="https://picsum.photos/seed/p1/400/400" alt="Nước hoa A" />
+                <h4>Nước hoa A</h4>
+                <div class="price-row-card">
+                  <span class="price">950.000 đ</span>
+                  <span class="badge sale">-47%</span>
+                </div>
+                <button class="btn add">Thêm vào giỏ</button>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="card">
+                <img src="https://picsum.photos/seed/p2/400/400" alt="Nước hoa B" />
+                <h4>Nước hoa B</h4>
+                <div class="price-row-card">
+                  <span class="price">539.000 đ</span>
+                  <span class="badge sale">-52%</span>
+                </div>
+                <button class="btn add">Thêm vào giỏ</button>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="card">
+                <img src="https://picsum.photos/seed/p3/400/400" alt="" />
+                <h4>Nước hoa C</h4>
+                <div class="price-row-card">
+                  <span class="price">1.290.000 đ</span>
+                </div>
+                <button class="btn add">Thêm vào giỏ</button>
+              </article>
+            </div>
+
+            <div class="swiper-slide">
+              <article class="card">
+                <img src="https://picsum.photos/seed/p4/400/400" alt="" />
+                <h4>Nước hoa D</h4>
+                <div class="price-row-card">
+                  <span class="price">890.000 đ</span>
+                  <span class="badge sale">-20%</span>
+                </div>
+                <button class="btn add">Thêm vào giỏ</button>
+              </article>
+            </div>
+            
+            <div class="swiper-slide">
+              <article class="card">
+                <img src="https://picsum.photos/seed/p5/400/400" alt="" />
+                <h4>Nước hoa E</h4>
+                <div class="price-row-card">
+                  <span class="price">1.050.000 đ</span>
+                </div>
+                <button class="btn add">Thêm vào giỏ</button>
+              </article>
+            </div>
+          </div>
+          <div class="product-pagination"></div>
+        </div>
     </main>    
     <!-- FOOTER -->
     <footer class="site-footer">
@@ -132,6 +293,40 @@
         window.scrollTo({ top: 0, behavior: "smooth" })
       );
       toggleTop();
+      
+      // Swiper hình ảnh 
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 100,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        loop: true,
+        autoplay: {
+          delay: 3000,          
+          disableOnInteraction: false,
+        },
+      });
+
+      // Swiper sản phẩm
+      var productSwiper = new Swiper('.product-swiper', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: '.product-next',
+          prevEl: '.product-prev',
+        },
+        pagination: {
+        el: '.product-pagination',
+        clickable: true,
+        },
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        }
+      });
     </script>
 </body>
 </html>
